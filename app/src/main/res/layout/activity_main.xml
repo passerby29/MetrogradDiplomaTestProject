@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_pnum"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="36dp"
+        android:hint="Введите номер телефона"
+        android:scrollbarSize="25dp"
+        android:textColorHint="@color/texts"
+        app:boxBackgroundMode="none"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/pnEditText"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_style"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:textColor="@color/texts"
+            android:textSize="20sp"
+            app:mask="+#(###) ### ## ##"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_pass"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Введите пароль"
+        android:scrollbarSize="25dp"
+        android:textColorHint="@color/texts"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_pnum"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#393939">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passEditText"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_style"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:textColor="@color/texts"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/reg_txt"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Ещё нет аккаунта? Зарегистрируйтесь"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_pass" />
+
+    <Button
+        android:id="@+id/log_btn"
+        android:layout_width="181dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/btns_style"
+        android:onClick="logIntent"
+        android:text="Войти"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_pass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

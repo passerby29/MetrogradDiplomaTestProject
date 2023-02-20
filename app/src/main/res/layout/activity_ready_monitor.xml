@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadyMonitorActivity">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_style"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="Прошедшие мониторинги"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/ready_monitors_list"
+        android:layout_width="0dp"
+        android:layout_height="450dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:divider="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <LinearLayout
+        android:id="@+id/layout_true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ready_monitors_list">
+
+        <ImageButton
+            android:id="@+id/new_monitor_btn"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/nonselect_btn_style1"
+            android:onClick="newMonitor"
+            android:scaleType="centerCrop"
+            android:src="@drawable/new_monitor_btn"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/monitor_ready_btn1"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:background="@drawable/select_btn_style2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ready_monitor_btn"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_false"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ready_monitors_list">
+
+        <ImageButton
+            android:id="@+id/contacts_btn"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/nonselect_btn_style1"
+            android:onClick="contacts"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contacts_btn"
+            android:text="Закончить мониторинг"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/monitor_ready_btn2"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:background="@drawable/select_btn_style2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ready_monitor_btn"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/header_style"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/return_btn2"
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|center_vertical"
+            android:layout_marginStart="11dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/trending_flat_auth" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:paddingRight="40dp"
+            android:text="МУП Метроград"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_pnum_reg"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:scrollbarSize="25dp"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/phone_reg"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical"
+                    android:hint="Введите номер телефона"
+                    android:inputType="phone"
+                    android:textColor="@color/texts"
+                    android:textSize="24sp"
+                    app:mask="+#(###) ### ## ##"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_pass_reg"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:scrollbarSize="25dp"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_pnum_reg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pass_reg"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical"
+                    android:hint="Введите пароль"
+                    android:inputType="textPassword"
+                    android:textColor="@color/texts"
+                    android:textSize="24sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_pass_conf_reg"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:scrollbarSize="25dp"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_pass_reg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pass_conf_reg"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical"
+                    android:hint="Подтвердите пароль"
+                    android:inputType="textPassword"
+                    android:textColor="@color/texts"
+                    android:textSize="24sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_name_reg"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:scrollbarSize="25dp"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_pass_conf_reg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_reg"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical"
+                    android:hint="Введите имя"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/texts"
+                    android:textSize="24sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_sur_reg"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:scrollbarSize="25dp"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_name_reg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/surname_reg"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical"
+                    android:hint="Введите фамилию"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/texts"
+                    android:textSize="24sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/btns_style"
+        android:onClick="regUser"
+        android:text="Зарегистрироваться"
+        android:textAlignment="center"
+        android:textColor="@color/texts"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
